@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           <Link to="/portfolio" className="footer-link">Portfolio</Link>
         </Col>
       </Row>
-      <Row style={{ textAlign: 'center' }}>
+      <Row style={{ justifyContent: 'center' }}>
         <small>&copy; 2024 Your Company. All Rights Reserved.</small>
       </Row>
     </Container>
