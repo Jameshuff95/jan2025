@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Nav, NavLink, Modal, Button, Col } from 'react-bootstrap';
+import { Nav, NavLink, Modal, Button } from 'react-bootstrap';
 
 interface ThemeProps {
   theme: string;
