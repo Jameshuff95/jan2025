@@ -1,42 +1,85 @@
+:root {
+  box-sizing: border-box;
+  background: url('./assets/nebula.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 10vh 0 0;
+  padding: 0;
+  height: 90vh;
+  overflow: auto;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  overflow: auto;
 }
 
 .card {
-  padding: 2em;
+  border: 1px solid black;
+  width: 90%;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 0.25rem 0.125rem black;
+  min-height: 30vh;
+  flex: 1;
+  background: purple;
+  color: white;
+  margin: 0 auto;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-link {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+#nav,
+#footer {
+  z-index: 10;
+  bottom: 10;
+  background: #333;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  justify-content: space-evenly;
+  border-bottom: 1px solid white;
+}
+
+#footer {
+  bottom: 0;
+  height: 50vh;
+  margin-top: 0.5rem;
+  border-top: 1px solid white;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
