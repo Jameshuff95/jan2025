@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
-
 import '../App.css';
 import '../index.css';
 
