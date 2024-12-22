@@ -16,27 +16,34 @@
   --card-text: #fff;
 }
 
-#root {
+#root,
+body {
   box-sizing: border-box;
-  overflow: hidden;
-  margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+}
+
+#root {
+  margin: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
 }
 
 body {
   margin: 10vh 0 0;
-  padding: 0;
   background: var(--bg-url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100%;
-  border: 1px solid red;
 }
 
 .container {

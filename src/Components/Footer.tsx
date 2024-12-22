@@ -6,30 +6,27 @@ const Footer: React.FC = () => {
   return (
     // prettier-ignore
     <Container id="footer">
-      <Row>
-        <Card.Title style={{ color: 'var(--nav-color' }}>Quick Links</Card.Title>
-      </Row>
-      <Row style={{ justifyContent: 'space-evenly' }}>
+      <Row style={{ justifyContent: 'space-evenly', height: '20%' }}>
         <i className="bi bi-github" />
         <i className="bi bi-stack-overflow" />
         <i className="bi bi-linkedin" />
         <i className="bi bi-envelope" />
       </Row>
-      <Row id="footer-links-container">
-        <Col style={{width: '30%', gap: '1rem'}}>
+      <Row id="footer-links-container" style={{ height: '70%' }}>
+        <Col className="footer-col">
           <Link to="/" className="footer-link">Home</Link>
           <Link to="/portfolio" className="footer-link">Portfolio</Link>
         </Col>
-        <Col style={{width: '30%', gap: '1rem'}}>
+        <Col className="footer-col">
           <Link to="/about" className="footer-link">About</Link>
           <Link to="/portfolio" className="footer-link">Portfolio</Link>
         </Col>
-        <Col style={{width: '30%', gap: '1rem'}}>
+        <Col className="footer-col">
           <Link to="/contact" className="footer-link">Contact</Link>
           <Link to="/portfolio" className="footer-link">Portfolio</Link>
         </Col>
       </Row>
-      <Row style={{ justifyContent: 'center' }}>
+      <Row style={{ justifyContent: 'center', height: '10%' }}>
         <small>&copy; 2024 Your Company. All Rights Reserved.</small>
       </Row>
     </Container>
