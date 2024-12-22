@@ -1,34 +1,40 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { Nav, NavLink } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Nav, NavLink, Modal, Button } from 'react-bootstrap';
 
-const Navigation: React.FC = () => {
-  const [theme, setTheme] = useState<string>('dark');
+interface ThemeProps {
+  theme: string;
+  toggleTheme: () => void;
+}
 
-  const toggleTheme = () => {
-    const newTheme: string = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    console.log(theme);
-  };
+const Navigation: React.FC<ThemeProps> = ({ theme, toggleTheme }) => {
+  const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    const themeBtn = document.getElementById('theme');
-    themeBtn?.addEventListener('click', toggleTheme);
-    return () => {
-      themeBtn?.removeEventListener('click', toggleTheme);
-    };
-  }, [theme]);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
-    <Nav id="nav">
+    <Nav id="nav" className={theme === 'dark' ? 'dark' : 'light'}>
       <i
         id="theme"
-        className={theme === 'dark' ? 'bi bi-moon' : 'bi bi-sun-fill'}
+        className={theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'}
+        onClick={toggleTheme}
       />
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/contact">Contact</NavLink>
-      <NavLink href="/portfolio">Portfolio</NavLink>
+      <i id="menu-btn" className="bi bi-list" onClick={handleShow} />
+      <Modal id="menu" show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Menu</Modal.Title>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Header>
+        <Modal.Body>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/portfolio">Portfolio</NavLink>
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
     </Nav>
   );
 };

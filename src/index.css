@@ -1,3 +1,86 @@
+.light {
+  --bg-url: url('./assets/clouds.png');
+  --nav-link-color: blue;
+  --nav-border: 1px solid black;
+  --background: #fff999;
+  --theme-color: orange;
+  --card-text: #333;
+}
+
+.dark {
+  --bg-url: url('./assets/nebula.png');
+  --nav-color: red;
+  --nav-border: 1px solid white;
+  --background: #333;
+  --theme-color: lightblue;
+  --card-text: #fff;
+}
+
+:root {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 10vh 0 0;
+  padding: 0;
+  height: 90vh;
+  overflow: auto;
+  background: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.card {
+  border: 1px solid black;
+  width: 90%;
+  padding: 2%;
+  border-radius: 5px;
+  /*box-shadow: 0 0.25rem black;*/
+  min-height: 30vh;
+  flex: 1;
+  background: var(--background);
+  color: var(--card-text);
+  margin: 0 auto;
+}
+
+.card-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 ::-webkit-scrollbar {
   width: 1px;
 }
@@ -7,13 +90,11 @@
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
