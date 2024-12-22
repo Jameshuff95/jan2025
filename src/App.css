@@ -15,6 +15,16 @@
 
 #menu-btn {
   color: var(--card-text);
+  border: 1px solid var(--card-text);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+
+#menu-btn:active {
+  background-color: var(--card-text);
+  color: var(--background);
+  box-shadow: inset 0 0 0.25rem var(--background);
 }
 
 #nav,

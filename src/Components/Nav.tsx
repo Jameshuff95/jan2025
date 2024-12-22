@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Nav, NavLink, Modal, Button } from 'react-bootstrap';
+import { Nav, NavLink, Modal, Button, Col } from 'react-bootstrap';
 
 interface ThemeProps {
   theme: string;
@@ -16,10 +16,11 @@ const Navigation: React.FC<ThemeProps> = ({ theme, toggleTheme }) => {
     <Nav id="nav" className={theme === 'dark' ? 'dark' : 'light'}>
       <i
         id="theme"
-        className={theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'}
         onClick={toggleTheme}
+        className={theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'}
       />
-      <i id="menu-btn" className="bi bi-list" onClick={handleShow} />
+      <i id="menu-btn" className="bi bi-list" style={{}} onClick={handleShow} />
+
       <Modal id="menu" show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Menu</Modal.Title>
