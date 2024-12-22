@@ -2,7 +2,7 @@
   --bg-url: url('./assets/clouds.png');
   --nav-link-color: blue;
   --nav-border: 1px solid black;
-  --background: #fff999;
+  --background: lightblue;
   --theme-color: orange;
   --card-text: #333;
 }
@@ -54,7 +54,7 @@ body {
 
 .card {
   border: 1px solid black;
-  width: 90%;
+  width: 95%;
   padding: 2%;
   border-radius: 5px;
   box-shadow: 0 0.25rem 0.25rem black !important;
