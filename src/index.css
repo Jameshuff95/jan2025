@@ -9,7 +9,6 @@
 
 .dark {
   --bg-url: url('./assets/nebula.png');
-  --nav-color: red;
   --nav-border: 1px solid white;
   --background: #333;
   --theme-color: lightblue;

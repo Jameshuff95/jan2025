@@ -60,7 +60,7 @@
 
 #footer {
   padding: 1.5rem 0;
-  color: var(--nav-color);
+  color: var(--card-text);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -95,7 +95,7 @@
 }
 
 .footer-link {
-  color: var(--nav-color);
+  color: var(--card-text);
   text-decoration: none;
   cursor: pointer;
 }

@@ -23,14 +23,62 @@ const App: React.FC = () => {
     setTheme(newTheme);
   };
 
+  const getPageName = (path: string) => {
+    switch (path) {
+      case '/':
+        return 'Home';
+      case '/about':
+        return 'About Me';
+      case '/contact':
+        return 'Contact Me';
+      case '/portfolio':
+        return 'Portfolio';
+      default:
+        return '';
+    }
+  };
+
+  // Use window.location.pathname to get the current path
+  const currentPage = getPageName(window.location.pathname);
+
+  const pages = [
+    {
+      id: '0',
+      path: '/',
+      element: <Home />,
+      title: 'Home',
+    },
+    {
+      id: '1',
+      path: '/about',
+      element: <About />,
+      title: 'About Me',
+    },
+    {
+      id: '2',
+      path: '/contact',
+      element: <Contact />,
+      title: 'Contact Me',
+    },
+    {
+      id: '3',
+      path: '/portfolio',
+      element: <Portfolio />,
+      title: 'My Portfolio',
+    },
+  ];
+
   return (
     <Router>
-      <Navigation theme={theme} toggleTheme={toggleTheme} />
+      <Navigation
+        theme={theme}
+        toggleTheme={toggleTheme}
+        currentPage={currentPage}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Contact" element={<Contact />} />
+        {pages.map((page) => (
+          <Route key={page.id} path={page.path} element={page.element} />
+        ))}
       </Routes>
       <Footer />
     </Router>
