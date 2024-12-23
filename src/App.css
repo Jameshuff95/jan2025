@@ -117,3 +117,11 @@
     width: 95%;
   }
 }
+
+.font-3rem {
+  font-size: 3rem;
+}
+
+.p-lr-1rem {
+  padding: 0 1rem;
+}

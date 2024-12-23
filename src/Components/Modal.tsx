@@ -30,12 +30,11 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
     <Modal id="menu" show={show} onHide={handleClose}>
       <Modal.Header>
         <Row
+          className="font-3rem p-lr-1rem"
           style={{
-            justifyContent: 'center',
             height: '10vh',
-            fontSize: '3rem',
-            padding: '0 1rem',
             width: '95%',
+            justifyContent: 'center',
           }}
         >
           <Modal.Title>Menu</Modal.Title>
@@ -48,21 +47,20 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
               key={index}
               href={link.href}
               style={{
-                fontSize: '3rem',
-                padding: '0 1rem',
                 justifyContent: 'flex-start',
               }}
+              className="font-3rem p-lr-1rem"
             >
               {link.text}
             </NavLink>
           ))}
         </Col>
+        <hr />
       </Modal.Body>
       <Modal.Footer>
-        <hr />
         <Row
           style={{
-            height: '6vh',
+            height: '7vh',
             justifyContent: 'flex-end',
           }}
         >
@@ -77,7 +75,7 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
               padding: '.5rem',
               width: '25%',
               borderRadius: '10px',
-              fontSize: '1.5rem',
+              fontSize: '2rem',
             }}
           >
             Close
