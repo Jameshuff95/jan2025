@@ -42,7 +42,7 @@
 #nav {
   position: fixed;
   top: 0;
-  padding: 0 4%;
+  padding: 1rem 4%;
   height: 10vh;
   width: 92%;
   justify-content: space-between;
