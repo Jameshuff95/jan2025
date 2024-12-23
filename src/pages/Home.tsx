@@ -7,9 +7,6 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Card>Home</Card>
-      <Card>Home</Card>
-      <Card>Home</Card>
-      <Card>Home</Card>
     </Container>
   );
 };
