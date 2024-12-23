@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 interface ThemeProps {
   theme: string;
   toggleTheme: () => void;
+  currentPage: string;
 }
 
 const Navigation: React.FC<ThemeProps> = ({ theme, toggleTheme }) => {

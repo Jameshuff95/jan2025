@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import Navigation from './Components/Nav.tsx';
-import Footer from './Components/Footer.tsx';
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
 import Portfolio from './pages/Portfolio.tsx';
@@ -68,8 +68,19 @@ const App: React.FC = () => {
     },
   ];
 
+  const ScrollToTop: React.FC = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <Router>
+      <ScrollToTop />
       <Navigation
         theme={theme}
         toggleTheme={toggleTheme}
@@ -80,7 +91,6 @@ const App: React.FC = () => {
           <Route key={page.id} path={page.path} element={page.element} />
         ))}
       </Routes>
-      <Footer />
     </Router>
   );
 };

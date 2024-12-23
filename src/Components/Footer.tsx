@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
   return (
     // prettier-ignore
-    <Container id="footer">
+    <Row id="footer">
       <Row style={{ justifyContent: 'space-evenly', height: '20%' }}>
         <i className="bi bi-github" />
         <i className="bi bi-stack-overflow" />
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       <Row style={{ justifyContent: 'center', height: '10%' }}>
         <small>&copy; 2024 Your Company. All Rights Reserved.</small>
       </Row>
-    </Container>
+    </Row>
   );
 };
 

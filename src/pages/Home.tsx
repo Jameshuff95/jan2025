@@ -2,11 +2,27 @@ import React from 'react';
 import { Card, Container } from 'react-bootstrap';
 import '../App.css';
 import '../index.css';
+import Footer from '../Components/Footer';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Card>Home</Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>Home</Card.Title>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>Home</Card.Title>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>Home</Card.Title>
+        </Card.Body>
+      </Card>
+      <Footer />
     </Container>
   );
 };
