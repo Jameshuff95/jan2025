@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Col, Row, NavLink, Button } from 'react-bootstrap';
+import { Modal, Col, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 interface ModalProps {
   show: boolean;
@@ -43,16 +44,17 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
       <Modal.Body>
         <Col style={{ height: '75vh' }}>
           {links.map((link, index) => (
-            <NavLink
+            <Link
               key={index}
-              href={link.href}
+              to={link.href}
+              onClick={handleClose}
               style={{
                 justifyContent: 'flex-start',
               }}
               className="font-3rem p-lr-1rem"
             >
               {link.text}
-            </NavLink>
+            </Link>
           ))}
         </Col>
         <hr />
