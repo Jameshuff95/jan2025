@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Card,
   Container,
   Col,
-  Row,
   Figure,
   FigureImage,
   FigureCaption,
