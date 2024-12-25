@@ -65,7 +65,7 @@ body {
   width: 90%;
   padding: 2%;
   border-radius: 5px;
-  box-shadow: 0 0.25rem 0.25rem black !important;
+  box-shadow: 0 0.25rem 0.25rem black;
   background: var(--background);
   color: var(--card-text);
   margin: 1rem auto;

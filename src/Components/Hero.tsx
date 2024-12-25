@@ -1,8 +1,29 @@
 import React from 'react';
 import { Card, Col, Figure, FigureImage, FigureCaption } from 'react-bootstrap';
 import Me from '../assets/me.png';
+import Intro from './Intro';
+
+interface Title {
+  id: number;
+  text: string;
+}
 
 const Hero: React.FC = () => {
+  const titles: Title[] = [
+    {
+      id: 1,
+      text: 'Web Developer',
+    },
+    {
+      id: 2,
+      text: 'Problem Solver',
+    },
+    {
+      id: 3,
+      text: 'Student',
+    },
+  ];
+
   return (
     <Card>
       <Card.Body>
@@ -32,29 +53,28 @@ const Hero: React.FC = () => {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
+                justifyContent: 'space-around',
                 alignItems: 'center',
                 fontSize: '2rem',
                 height: '100%',
               }}
             >
-              <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                <i className="bi bi-check" />
-                Web Developer
-              </Card.Text>
-
-              <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                <i className="bi bi-check" />
-                Problem Solver
-              </Card.Text>
-
-              <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                <i className="bi bi-check" />
-                Student
-              </Card.Text>
+              {titles.map((title) => (
+                <Card.Text
+                  key={title.id}
+                  style={{
+                    width: '100%',
+                    textAlign: 'center',
+                  }}
+                >
+                  <i className="bi bi-check" />
+                  {title.text}
+                </Card.Text>
+              ))}
             </FigureCaption>
           </Col>
         </Figure>
+        <Intro />
       </Card.Body>
     </Card>
   );
