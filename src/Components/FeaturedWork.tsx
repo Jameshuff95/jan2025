@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Button, Card, Carousel, Row } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
@@ -80,3 +81,4 @@ const FeaturedWork: React.FC = () => {
 };
 
 export default FeaturedWork;
+*/
