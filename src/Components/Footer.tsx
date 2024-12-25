@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
       <Row
         style={{ justifyContent: 'center', height: '10%', fontSize: '2rem' }}
       >
-        <Card.Subtitle>
+        <Card.Subtitle style={{ textAlign: 'center' }}>
           &copy; 2024 Your Company. All Rights Reserved.
         </Card.Subtitle>
       </Row>

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <Card style={{ border: '1px solid red' }}>
+    <Card>
       <Card.Body>
         <Card.Title>Hello, my name is James.</Card.Title>
         <Figure

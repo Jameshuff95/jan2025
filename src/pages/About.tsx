@@ -24,36 +24,6 @@ const About: React.FC = () => {
           <Card.Title>About</Card.Title>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>About</Card.Title>
-        </Card.Body>
-      </Card>
       <Footer />
     </Container>
   );

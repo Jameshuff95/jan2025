@@ -14,21 +14,6 @@ const Contact: React.FC = () => {
           <Card.Title>Contact</Card.Title>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Contact</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Contact</Card.Title>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Contact</Card.Title>
-        </Card.Body>
-      </Card>
       <Footer />
     </Container>
   );

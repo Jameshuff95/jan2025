@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 .light {
   --bg-url: url('./assets/clouds.png');
   --nav-border: 1px solid black;
@@ -16,10 +20,6 @@
   --background-nav-footer: #444;
   --theme-color: #99f;
   --card-text: #fff;
-}
-
-* {
-  user-select: none;
 }
 
 #root,
@@ -50,14 +50,15 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 87.5vh;
+  gap: 1rem;
+  padding-top: 1rem;
+  min-height: 86vh;
 }
 
 .card {
