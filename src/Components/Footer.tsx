@@ -1,33 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Card, Row } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
   return (
-    // prettier-ignore
-    <Row id="footer">
-      <Row style={{ justifyContent: 'space-evenly', height: '20%' }}>
-        <i className="bi bi-github" />
-        <i className="bi bi-stack-overflow" />
-        <i className="bi bi-linkedin" />
-        <i className="bi bi-envelope" />
+    <Row id="footer" style={{ height: '10rem', color: 'var(--nav-text)' }}>
+      <Row
+        style={{
+          justifyContent: 'space-evenly',
+          height: '20%',
+          fontSize: '3.5rem',
+        }}
+      >
+        <i className="bi bi-github" style={{ color: 'green' }} />
+        <i className="bi bi-stack-overflow" style={{ color: 'orange' }} />
+        <i className="bi bi-linkedin" style={{ color: 'blue' }} />
+        <i className="bi bi-envelope" style={{ color: 'red' }} />
       </Row>
-      <Row id="footer-links-container" style={{ height: '70%' }}>
-        <Col className="footer-col">
-          <Link to="/" className="footer-link">Home</Link>
-          <Link to="/portfolio" className="footer-link">Portfolio</Link>
-        </Col>
-        <Col className="footer-col">
-          <Link to="/about" className="footer-link">About</Link>
-          <Link to="/portfolio" className="footer-link">Portfolio</Link>
-        </Col>
-        <Col className="footer-col">
-          <Link to="/contact" className="footer-link">Contact</Link>
-          <Link to="/portfolio" className="footer-link">Portfolio</Link>
-        </Col>
-      </Row>
-      <Row style={{ justifyContent: 'center', height: '10%' }}>
-        <small>&copy; 2024 Your Company. All Rights Reserved.</small>
+      <Row
+        style={{ justifyContent: 'center', height: '10%', fontSize: '2rem' }}
+      >
+        <Card.Subtitle>
+          &copy; 2024 Your Company. All Rights Reserved.
+        </Card.Subtitle>
       </Row>
     </Row>
   );

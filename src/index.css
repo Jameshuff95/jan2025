@@ -1,8 +1,9 @@
 .light {
   --bg-url: url('./assets/clouds.png');
-  --nav-link-color: blue;
   --nav-border: 1px solid black;
+  --nav-text: lightblue;
   --background: lightblue;
+  --background-nav-footer: #333;
   --theme-color: orange;
   --card-text: #333;
 }
@@ -10,8 +11,10 @@
 .dark {
   --bg-url: url('./assets/nebula.png');
   --nav-border: 1px solid white;
+  --nav-text: #333;
   --background: #333;
-  --theme-color: lightblue;
+  --background-nav-footer: lightblue;
+  --theme-color: #333;
   --card-text: #fff;
 }
 
@@ -65,18 +68,21 @@ body {
   margin: 1rem auto;
 }
 
+.card-half {
+  width: 45%;
+}
+
 .card-title {
   text-align: center;
   margin: 0 auto;
   font-size: 3rem;
 }
 
-.modal-title {
-  color: var(--nav-color);
+.card-body {
+  font-size: 2rem;
 }
 
 .row {
-  width: 100%;
   display: flex;
   align-items: center;
   height: 100%;

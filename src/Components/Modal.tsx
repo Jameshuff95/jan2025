@@ -36,22 +36,31 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
             height: '10vh',
             width: '95%',
             justifyContent: 'center',
+            fontSize: '3rem',
           }}
         >
-          <Modal.Title>Menu</Modal.Title>
+          <Modal.Title style={{ color: 'var(--card-text)', fontSize: '5rem' }}>
+            Menu
+          </Modal.Title>
         </Row>
       </Modal.Header>
       <Modal.Body>
-        <Col style={{ height: '75vh' }}>
+        <Col style={{ height: '75vh', justifyContent: 'space-evenly' }}>
           {links.map((link, index) => (
             <Link
               key={index}
               to={link.href}
               onClick={handleClose}
               style={{
+                display: 'flex',
                 justifyContent: 'flex-start',
+                alignItems: 'center',
+                textDecoration: 'none',
+                color: 'var(--card-text)',
+                height: '20%',
+                padding: '2% 5%',
+                fontSize: '4rem',
               }}
-              className="font-3rem p-lr-1rem"
             >
               {link.text}
             </Link>
@@ -74,10 +83,10 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
               color: 'white',
               cursor: 'pointer',
               margin: '0 1rem 0 0',
-              padding: '.5rem',
-              width: '25%',
+              padding: '.75rem',
+              width: '35%',
               borderRadius: '10px',
-              fontSize: '2rem',
+              fontSize: '3rem',
             }}
           >
             Close

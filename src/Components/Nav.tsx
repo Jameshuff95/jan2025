@@ -51,15 +51,8 @@ const Navigation: React.FC<ThemeProps> = ({ theme, toggleTheme }) => {
           onClick={toggleTheme}
           className={theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'}
         />
-        <Card.Title style={{ fontSize: '3rem', color: 'var(--card-text)' }}>
-          {currentPage}
-        </Card.Title>
-        <i
-          id="menu-btn"
-          className="bi bi-list"
-          style={{}}
-          onClick={handleShow}
-        />
+        <Card.Title style={{ fontSize: '5rem' }}>{currentPage}</Card.Title>
+        <i id="menu-btn" className="bi bi-list" onClick={handleShow} />
       </Nav>
       <Menu show={show} handleClose={handleClose} />
     </>

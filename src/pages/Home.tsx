@@ -1,19 +1,24 @@
 import React from 'react';
-import {
-  Card,
-  Container,
-  Col,
-  Figure,
-  FigureImage,
-  FigureCaption,
-} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import '../App.css';
 import '../index.css';
-import Me from '../assets/me.png';
 import Footer from '../Components/Footer';
+import Hero from '../Components/Hero.tsx';
+import FeaturedWork from '../Components/FeaturedWork.tsx';
 
 const Home: React.FC = () => {
-  /* 
+  return (
+    <Container>
+      <Hero />
+      <FeaturedWork />
+      <Footer />
+    </Container>
+  );
+};
+
+export default Home;
+
+/* 
   const phrases: { id: number; phrase: string }[] = [
     { id: 1, phrase: 'web developer' },
     { id: 2, phrase: 'student' },
@@ -33,64 +38,3 @@ const Home: React.FC = () => {
     }, 2000)
   }, [])
     */
-  return (
-    <Container>
-      <Card>
-        <Card.Body>
-          <Card.Title className="text-center">
-            Hello, my name is James.
-          </Card.Title>
-          <Figure
-            style={{
-              margin: '0',
-              border: '1px solid blue',
-              display: 'flex',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <Col style={{ justifyContent: 'center', width: '50%' }}>
-              <FigureImage
-                src={Me}
-                alt="A picture of James Huff"
-                style={{
-                  borderRadius: '50%',
-                  marginTop: '-25%',
-                  padding: '2%',
-                }}
-              />
-            </Col>
-            <Col style={{ width: '50%', border: '1px solid white' }}>
-              <FigureCaption
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  fontSize: '2rem',
-                  height: '100%',
-                }}
-              >
-                <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                  <i className="bi bi-check" />
-                  Web Developer
-                </Card.Text>
-                <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                  <i className="bi bi-check" />
-                  Problem Solver
-                </Card.Text>
-                <Card.Text style={{ width: '100%', textAlign: 'center' }}>
-                  <i className="bi bi-check" />
-                  Student
-                </Card.Text>
-              </FigureCaption>
-            </Col>
-          </Figure>
-        </Card.Body>
-      </Card>
-      <Footer />
-    </Container>
-  );
-};
-
-export default Home;
