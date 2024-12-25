@@ -28,28 +28,32 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
   ];
 
   return (
-    <Modal id="menu" show={show} onHide={handleClose}>
-      <Modal.Header>
-        <Row
-          className="font-3rem p-lr-1rem"
-          style={{
-            height: '10vh',
-            width: '95%',
-            justifyContent: 'center',
-            fontSize: '3rem',
-          }}
-        >
-          <Modal.Title style={{ color: 'var(--card-text)', fontSize: '5rem' }}>
-            Menu
-          </Modal.Title>
-        </Row>
-        <hr />
+    <Modal
+      id="menu"
+      show={show}
+      onHide={handleClose}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Modal.Header
+        style={{
+          height: '15vh',
+          color: 'var(--card-text)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Modal.Title style={{ fontSize: '5rem' }}>Menu</Modal.Title>
       </Modal.Header>
-      <Modal.Body style={{ height: '70vh' }}>
+      <hr />
+      <Modal.Body style={{ height: '60%' }}>
         <Col
           style={{
             justifyContent: 'space-around',
-            height: '100%',
+            height: '55vh',
           }}
         >
           {links.map((link, index) => (
@@ -73,15 +77,13 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
         </Col>
       </Modal.Body>
       <hr />
-
       <Modal.Footer
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          height: '12vh',
-          padding: '0 1rem 0 0',
-          border: '1px solid red',
+          height: '15vh',
+          padding: '0 2rem 0 0',
         }}
       >
         <Button
@@ -92,7 +94,7 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
             color: 'white',
             cursor: 'pointer',
             width: '40%',
-            height: '75%',
+            height: '60%',
             border: '1px solid var(--card-text)',
             borderRadius: '10px',
             fontSize: '3.5rem',

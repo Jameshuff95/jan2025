@@ -86,7 +86,6 @@
   left: 2.5%;
   background: var(--background);
   width: 95%;
-  height: 95%;
   border: 1px solid var(--card-text);
   border-radius: 10px;
   display: flex;
