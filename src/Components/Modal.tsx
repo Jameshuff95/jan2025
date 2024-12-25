@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Col, Row, Button } from 'react-bootstrap';
+import { Modal, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 interface ModalProps {
