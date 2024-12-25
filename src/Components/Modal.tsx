@@ -81,6 +81,7 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
           justifyContent: 'flex-end',
           height: '12vh',
           padding: '0 1rem 0 0',
+          border: '1px solid red',
         }}
       >
         <Button
