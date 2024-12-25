@@ -43,9 +43,15 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
             Menu
           </Modal.Title>
         </Row>
+        <hr />
       </Modal.Header>
       <Modal.Body>
-        <Col style={{ height: '75vh', justifyContent: 'space-evenly' }}>
+        <Col
+          style={{
+            height: '85vh',
+            justifyContent: 'space-between',
+          }}
+        >
           {links.map((link, index) => (
             <Link
               key={index}
@@ -57,7 +63,7 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
                 alignItems: 'center',
                 textDecoration: 'none',
                 color: 'var(--card-text)',
-                height: '20%',
+                height: '15%',
                 padding: '2% 5%',
                 fontSize: '4rem',
               }}
@@ -65,34 +71,33 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
               {link.text}
             </Link>
           ))}
-        </Col>
-        <hr />
-      </Modal.Body>
-      <Modal.Footer>
-        <Row
-          style={{
-            height: '7vh',
-            justifyContent: 'flex-end',
-          }}
-        >
-          <Button
-            variant="secondary"
-            onClick={handleClose}
+          <hr />
+          <Row
             style={{
-              background: 'red',
-              color: 'white',
-              cursor: 'pointer',
-              margin: '0 1rem 0 0',
-              padding: '.75rem',
-              width: '35%',
-              borderRadius: '10px',
-              fontSize: '3rem',
+              justifyContent: 'flex-end',
+              height: '15vh',
             }}
           >
-            Close
-          </Button>
-        </Row>
-      </Modal.Footer>
+            <Button
+              variant="danger"
+              onClick={handleClose}
+              style={{
+                background: 'red',
+                color: 'white',
+                cursor: 'pointer',
+                margin: '0 3rem 2rem 0',
+                padding: '2rem .75rem',
+                width: '40%',
+                border: '1px solid var(--card-text)',
+                borderRadius: '10px',
+                fontSize: '3.5rem',
+              }}
+            >
+              Close
+            </Button>
+          </Row>
+        </Col>
+      </Modal.Body>
     </Modal>
   );
 };

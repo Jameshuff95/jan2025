@@ -18,6 +18,10 @@
   --card-text: #fff;
 }
 
+* {
+  user-select: none;
+}
+
 #root,
 body {
   box-sizing: border-box;
