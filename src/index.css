@@ -3,7 +3,7 @@
   --nav-border: 1px solid black;
   --nav-text: lightblue;
   --background: lightblue;
-  --background-nav-footer: #333;
+  --background-nav-footer: navy;
   --theme-color: orange;
   --card-text: #333;
 }
@@ -11,10 +11,10 @@
 .dark {
   --bg-url: url('./assets/nebula.png');
   --nav-border: 1px solid white;
-  --nav-text: #333;
+  --nav-text: #99f;
   --background: #333;
-  --background-nav-footer: lightblue;
-  --theme-color: #333;
+  --background-nav-footer: #444;
+  --theme-color: #99f;
   --card-text: #fff;
 }
 

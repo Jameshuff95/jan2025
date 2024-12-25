@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           fontSize: '3.5rem',
         }}
       >
-        <i className="bi bi-github" style={{ color: 'green' }} />
+        <i className="bi bi-github" style={{ color: '#fff' }} />
         <i className="bi bi-stack-overflow" style={{ color: 'orange' }} />
         <i className="bi bi-linkedin" style={{ color: 'blue' }} />
         <i className="bi bi-envelope" style={{ color: 'red' }} />

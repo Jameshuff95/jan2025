@@ -4,12 +4,15 @@ import '../App.css';
 import '../index.css';
 import Footer from '../Components/Footer';
 import Hero from '../Components/Hero.tsx';
+import Intro from '../Components/Intro.tsx';
+
 //import FeaturedWork from '../Components/FeaturedWork.tsx';
 
 const Home: React.FC = () => {
   return (
     <Container>
       <Hero />
+      <Intro />
       <Footer />
     </Container>
   );
