@@ -68,7 +68,7 @@ body {
   box-shadow: 0 0.25rem 0.25rem black;
   background: var(--background);
   color: var(--card-text);
-  margin: 1rem auto;
+  margin: auto;
 }
 
 .card-half {
