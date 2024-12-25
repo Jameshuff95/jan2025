@@ -3,7 +3,13 @@ import { Card, Row } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
   return (
-    <Row id="footer" style={{ height: '10rem', color: 'var(--nav-text)' }}>
+    <Row
+      id="footer"
+      style={{
+        height: '10rem',
+        color: 'var(--nav-text)',
+      }}
+    >
       <Row
         style={{
           justifyContent: 'space-evenly',
