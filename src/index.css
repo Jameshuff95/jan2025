@@ -1,5 +1,6 @@
 * {
   user-select: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .light {
@@ -15,11 +16,11 @@
 .dark {
   --bg-url: url('./assets/nebula.png');
   --nav-border: 1px solid white;
-  --nav-text: #99f;
+  --nav-text: aqua;
   --background: #333;
   --background-nav-footer: #444;
-  --theme-color: #99f;
-  --card-text: #fff;
+  --theme-color: aqua;
+  --card-text: aqua;
 }
 
 #root,
@@ -65,8 +66,8 @@ body {
   border: 1px solid black;
   width: 90%;
   padding: 2%;
-  border-radius: 5px;
-  box-shadow: 0 0.25rem 0.25rem black;
+  border-radius: 25px;
+  box-shadow: 0 0.5rem 0.5rem black;
   background: var(--background);
   color: var(--card-text);
   margin: auto;
@@ -79,7 +80,12 @@ body {
 .card-title {
   text-align: center;
   margin: 0 auto;
-  font-size: 3rem;
+  font-size: 2em;
+  color: var(--nav-text);
+}
+
+.card-subtitle {
+  font-size: 2.5rem;
 }
 
 .card-body {

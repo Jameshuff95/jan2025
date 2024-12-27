@@ -23,7 +23,7 @@
   border-radius: 10px;
   display: grid;
   place-items: center;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 #menu-btn:active {
@@ -100,10 +100,8 @@
   }
 }
 
-.font-3rem {
-  font-size: 3rem;
-}
-
-.p-lr-1rem {
-  padding: 0 1rem;
+.flex-col-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

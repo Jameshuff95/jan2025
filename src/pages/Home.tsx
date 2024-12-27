@@ -4,6 +4,9 @@ import '../App.css';
 import '../index.css';
 import Footer from '../Components/Footer';
 import Hero from '../Components/Hero.tsx';
+import Intro from '../Components/Intro.tsx';
+import Mission from '../Components/Mission.tsx';
+import HomeSocials from '../Components/HomeSocials.tsx';
 
 //import FeaturedWork from '../Components/FeaturedWork.tsx';
 
@@ -11,6 +14,9 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Hero />
+      <Intro />
+      <Mission />
+      <HomeSocials />
       <Footer />
     </Container>
   );

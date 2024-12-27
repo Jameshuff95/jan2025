@@ -1,8 +1,12 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+
+import '../App.css';
+import '../index.css';
+
 const Intro: React.FC = () => {
   return (
-    <Col>
+    <Card>
       <Card.Title>
         Driven by Curiosity
         <br />
@@ -20,7 +24,7 @@ const Intro: React.FC = () => {
         </Card.Text>
         <Card.Text>Let's create something amazing together!</Card.Text>
       </Card.Body>
-    </Col>
+    </Card>
   );
 };
 
