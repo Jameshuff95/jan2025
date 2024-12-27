@@ -21,7 +21,7 @@ const Education: React.FC = () => {
     <>
       {schools.map((school) => (
         <Card key={school.id}>
-          <Card.Title>{school.degree}</Card.Title>
+          <Card.Subtitle>{school.degree}</Card.Subtitle>
           <Card.Text>{school.name}</Card.Text>
           <Card.Text>
             {school.start} - {school.end}

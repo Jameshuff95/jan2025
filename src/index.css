@@ -10,7 +10,7 @@
   --background: lightblue;
   --background-nav-footer: navy;
   --theme-color: orange;
-  --card-text: #333;
+  --card-text: navy;
 }
 
 .dark {
@@ -69,7 +69,7 @@ body {
   border-radius: 25px;
   box-shadow: 0 0.5rem 0.5rem black;
   background: var(--background);
-  color: var(--card-text);
+  color: navy;
   margin: auto;
 }
 
@@ -80,16 +80,24 @@ body {
 .card-title {
   text-align: center;
   margin: 0 auto;
-  font-size: 2em;
-  color: var(--nav-text);
+  font-size: 4rem;
+  color: var(--card-text);
 }
 
 .card-subtitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--card-text);
 }
 
 .card-body {
   font-size: 2rem;
+}
+
+.card-text {
+  font-size: 2rem;
+  color: var(--card-text);
 }
 
 .row {

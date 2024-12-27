@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Col, Button } from 'react-bootstrap';
 import Cert1 from '../assets/cert1.png';
 import Cert2 from '../assets/cert2.png';
 import Cert3 from '../assets/cert3.png';
@@ -35,12 +35,27 @@ const Certifications: React.FC = () => {
     <>
       {certifications.map((certification) => (
         <Card key={certification.id}>
-          <Card.Title>{certification.title}</Card.Title>
-          <Card.Img
-            src={certification.img}
-            alt={certification.alt}
-            style={{ width: '50%', borderRadius: '12.5px' }}
-          />
+          <Col style={{ alignItems: 'center', gap: '1rem' }}>
+            <Card.Subtitle>{certification.title}</Card.Subtitle>
+            <Card.Img
+              src={certification.img}
+              alt={certification.alt}
+              style={{ width: '90%', height: '20rem', borderRadius: '12.5px' }}
+            />
+            <Button
+              style={{
+                background: 'var(--card-text)',
+                color: 'var(--background)',
+                cursor: 'pointer',
+                width: '70%',
+                borderRadius: '10px',
+                fontSize: '2rem',
+                padding: '1rem',
+              }}
+            >
+              Click to view pdf
+            </Button>
+          </Col>
         </Card>
       ))}
     </>

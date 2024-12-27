@@ -77,7 +77,6 @@ const HomeSocials: React.FC = () => {
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
-          padding: '1rem',
         }}
       >
         {links.map((link) => (
@@ -94,7 +93,7 @@ const HomeSocials: React.FC = () => {
             >
               <i
                 className={link.icon}
-                style={{ color: link.color, fontSize: '4rem' }}
+                style={{ color: link.color, fontSize: '3em' }}
               />
               <Card.Text style={{ padding: '0', margin: '0' }}>
                 {link.legend}

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Card, Row } from 'react-bootstrap';
 
+import '../index.css';
+import '../App.css';
+
 const Footer: React.FC = () => {
   return (
     <Row
@@ -25,9 +28,9 @@ const Footer: React.FC = () => {
       <Row
         style={{ justifyContent: 'center', height: '10%', fontSize: '2rem' }}
       >
-        <Card.Subtitle style={{ textAlign: 'center' }}>
+        <Card.Text style={{ textAlign: 'center', color: 'var(--nav-bg' }}>
           &copy; 2024 Your Company. All Rights Reserved.
-        </Card.Subtitle>
+        </Card.Text>
       </Row>
     </Row>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col, Figure, FigureImage, FigureCaption } from 'react-bootstrap';
 import Me from '../assets/me.png';
+import Intro from './Intro';
 
 const Hero: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const Hero: React.FC = () => {
               simplicity, as they offer a more straightforward and effective
               approach.
             </Card.Text>
+            <Intro />
           </FigureCaption>
         </Col>
       </Card.Body>

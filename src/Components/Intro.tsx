@@ -6,7 +6,7 @@ import '../index.css';
 
 const Intro: React.FC = () => {
   return (
-    <Card>
+    <>
       <Card.Title>
         Driven by Curiosity
         <br />
@@ -14,8 +14,8 @@ const Intro: React.FC = () => {
       </Card.Title>
       <Card.Body style={{ textAlign: 'center' }}>
         <Card.Text>
-          Hello! I'm James, a passionate self-taught web developer with a strong
-          focus on the MERN stack (MongoDB, Express.js, React, Node.js).
+          I have a strong focus on the MERN stack (MongoDB, Express.js, React,
+          Node.js).
         </Card.Text>
         <Card.Text>
           I thrive in environments where creativity and problem-solving are at
@@ -24,7 +24,7 @@ const Intro: React.FC = () => {
         </Card.Text>
         <Card.Text>Let's create something amazing together!</Card.Text>
       </Card.Body>
-    </Card>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Form, Button } from 'react-bootstrap';
 
 import '../App.css';
 import '../index.css';
@@ -7,11 +7,97 @@ import '../index.css';
 import Footer from '../Components/Footer';
 
 const Contact: React.FC = () => {
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    // Add your form submission logic here
+  };
+
   return (
     <Container>
       <Card>
-        <Card.Body>
+        <Card.Body
+          style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
+        >
           <Card.Title>Contact</Card.Title>
+          <Card.Title className="container-title"></Card.Title>
+          <Card.Subtitle>
+            Send me an email and lets build something great! 👇
+          </Card.Subtitle>
+          <Form
+            onSubmit={handleSubmit}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-evenly',
+              borderRadius: '5px',
+              gap: '1rem',
+              height: '60vh',
+            }}
+          >
+            <Form.Group
+              controlId="name"
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Form.Control
+                type="text"
+                placeholder="First Name"
+                maxLength={25}
+                style={{
+                  borderRadius: '5px',
+                  height: '2rem',
+                  padding: '2%',
+                  width: '45%',
+                  fontSize: '1.75rem',
+                }}
+              />
+
+              <Form.Control
+                type="text"
+                placeholder="Last Name"
+                maxLength={25}
+                style={{
+                  width: '45%',
+                  borderRadius: '5px',
+                  height: '2rem',
+                  padding: '2%',
+                  fontSize: '1.75rem',
+                }}
+              />
+            </Form.Group>
+
+            <Form.Control
+              id="message-input"
+              as="textarea"
+              maxLength={250}
+              placeholder="250 character maximum message here..."
+              style={{
+                borderRadius: '5px',
+                height: '20rem',
+                padding: '2%',
+                fontSize: '1.75rem',
+              }}
+            />
+            <Button
+              type="submit"
+              style={{
+                width: '100%',
+                height: '4rem',
+                margin: '0 auto',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '5px',
+                fontSize: '1.75rem',
+                background: 'var(--card-text)',
+                color: '(#fff)',
+              }}
+            >
+              Submit
+            </Button>
+          </Form>
         </Card.Body>
       </Card>
       <Footer />

@@ -30,7 +30,10 @@ const Interests: React.FC = () => {
     <>
       {interests.map((interest) => (
         <Card key={interest.id}>
-          <Card.Title>{interest.title}</Card.Title>
+          <Card.Subtitle>{interest.title}</Card.Subtitle>
+          <Card.Text style={{ textAlign: 'left' }}>
+            {interest.description}
+          </Card.Text>
         </Card>
       ))}
     </>
