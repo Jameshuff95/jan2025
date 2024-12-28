@@ -60,7 +60,7 @@ div.container {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  padding-top: 11rem;
+  padding-top: 9rem;
   min-height: 86vh;
   min-width: 100%;
 }
@@ -117,13 +117,15 @@ div.carousel-indicators {
   justify-content: space-evenly;
   align-items: center;
   height: 4rem;
-  border: 1px solid red;
+  padding: 0 1rem;
 }
 
-.carousel-indicators [data-bs-target] {
-  color: red;
-  height: 2rem;
+div.carousel-indicators [data-bs-target] {
+  background: var(--card-text);
+  height: 1.5rem;
+  width: 25%;
 }
+
 .carousel-control-prev,
 .carousel-control-next {
   display: none !important;

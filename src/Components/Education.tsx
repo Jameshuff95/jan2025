@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Carousel } from 'react-bootstrap';
+import { Card, Carousel, Col } from 'react-bootstrap';
 const Education: React.FC = () => {
   const schools = [
     {
@@ -22,12 +22,19 @@ const Education: React.FC = () => {
       <Card.Title style={{ color: 'nav-text' }}>Education</Card.Title>
       <Carousel>
         {schools.map((school) => (
-          <Carousel.Item key={school.id}>
-            <Card.Text>{school.degree}</Card.Text>
-            <Card.Text>{school.name}</Card.Text>
-            <Card.Text>
-              {school.start} - {school.end}
-            </Card.Text>
+          <Carousel.Item key={school.id} style={{ height: '15rem' }}>
+            <Col
+              style={{
+                justifyContent: 'center',
+                height: '15rem',
+              }}
+            >
+              <Card.Text>{school.degree}</Card.Text>
+              <Card.Text>{school.name}</Card.Text>
+              <Card.Text>
+                {school.start} - {school.end}
+              </Card.Text>
+            </Col>
           </Carousel.Item>
         ))}
       </Carousel>

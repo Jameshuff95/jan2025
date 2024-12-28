@@ -32,20 +32,18 @@ const achievements: Achievement[] = [
 
 const Achievements: React.FC = () => {
   return (
-    <Card>
+    <Card style={{ height: '57vh' }}>
       <Card.Title>Achievements</Card.Title>
-      <Card.Body>
-        <Carousel>
-          {achievements.map((achievement) => (
-            <Carousel.Item key={achievement.id} style={{}}>
-              <Card.Subtitle>{achievement.title}</Card.Subtitle>
-              <Card.Text style={{ padding: '1rem' }}>
-                {achievement.description}
-              </Card.Text>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </Card.Body>
+      <Carousel>
+        {achievements.map((achievement) => (
+          <Carousel.Item key={achievement.id} style={{}}>
+            <Card.Subtitle>{achievement.title}</Card.Subtitle>
+            <Card.Text style={{ padding: '1rem' }}>
+              {achievement.description}
+            </Card.Text>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </Card>
   );
 };

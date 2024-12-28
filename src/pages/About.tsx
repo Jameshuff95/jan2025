@@ -16,8 +16,11 @@ const About: React.FC = () => {
   return (
     <>
       <Container style={{ textAlign: 'center' }}>
-        <Achievements />
+        {/*
+         */}
         <Education />
+        <Achievements />
+
         <Certifications />
         <Experience />
         <Interests />

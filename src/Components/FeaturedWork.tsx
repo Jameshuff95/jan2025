@@ -54,7 +54,7 @@ const FeaturedWork: React.FC = () => {
             <Card.Img src={project.img} alt={project.imgAlt} />
             <Card.Title>{project.title}</Card.Title>
             <Card.Subtitle>{project.technology}</Card.Subtitle>
-            <Card.Text style={{ minHeight: '10rem' }}>
+            <Card.Text style={{ minHeight: '10rem', padding: '2%' }}>
               {project.description}
             </Card.Text>
           </Carousel.Item>
