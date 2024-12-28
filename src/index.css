@@ -30,6 +30,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
 #root {
@@ -37,7 +38,6 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -46,13 +46,10 @@ main {
 }
 
 body {
-  margin: 12.5vh 0 0;
   background: var(--bg-url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
 }
 
 div.container {
@@ -60,9 +57,10 @@ div.container {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  padding-top: 9rem;
-  min-height: 86vh;
+  margin-top: 9rem;
+  min-height: 91vh;
   min-width: 100%;
+  padding: 0;
 }
 
 div.card {

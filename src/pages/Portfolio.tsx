@@ -153,8 +153,8 @@ const Portfolio: React.FC = () => {
             </Col>
           </Card>
         ))}
+        <Footer />
       </Container>
-      <Footer />
     </>
   );
 };

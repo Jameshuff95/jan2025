@@ -18,8 +18,8 @@ const Home: React.FC = () => {
         <Hero />
         <Intro />
         <Mission />
-        <HomeSocials />
         <FeaturedWork />
+        <HomeSocials />
       </Container>
       <Footer />
     </>
