@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 const Education: React.FC = () => {
   const schools = [
     {
@@ -18,19 +18,20 @@ const Education: React.FC = () => {
     },
   ];
   return (
-    <>
-      <Col style={{ gap: '1rem' }}>
+    <Card style={{ minHeight: '25rem' }}>
+      <Card.Title style={{ color: 'nav-text' }}>Education</Card.Title>
+      <Carousel>
         {schools.map((school) => (
-          <Card key={school.id} style={{ textAlign: 'left' }}>
+          <Carousel.Item key={school.id}>
             <Card.Text>{school.degree}</Card.Text>
             <Card.Text>{school.name}</Card.Text>
             <Card.Text>
               {school.start} - {school.end}
             </Card.Text>
-          </Card>
+          </Carousel.Item>
         ))}
-      </Col>
-    </>
+      </Carousel>
+    </Card>
   );
 };
 

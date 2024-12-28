@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Button } from 'react-bootstrap';
+import { Card, Carousel, Col, Button } from 'react-bootstrap';
 import Cert1 from '../assets/cert1.png';
 import Cert2 from '../assets/cert2.png';
 import Cert3 from '../assets/cert3.png';
@@ -32,33 +32,41 @@ const certifications: Certification[] = [
 ];
 const Certifications: React.FC = () => {
   return (
-    <>
-      {certifications.map((certification) => (
-        <Card key={certification.id}>
-          <Col style={{ alignItems: 'center', gap: '1rem' }}>
-            <Card.Subtitle>{certification.title}</Card.Subtitle>
-            <Card.Img
-              src={certification.img}
-              alt={certification.alt}
-              style={{ width: '90%', height: '20rem', borderRadius: '12.5px' }}
-            />
-            <Button
-              style={{
-                background: 'var(--card-text)',
-                color: 'var(--background)',
-                cursor: 'pointer',
-                width: '70%',
-                borderRadius: '10px',
-                fontSize: '2rem',
-                padding: '1rem',
-              }}
-            >
-              Click to view pdf
-            </Button>
-          </Col>
-        </Card>
-      ))}
-    </>
+    <Card>
+      <Card.Title style={{ color: 'nav-text' }}>Certifications</Card.Title>
+
+      <Carousel>
+        {certifications.map((certification) => (
+          <Carousel.Item key={certification.id}>
+            <Col style={{ alignItems: 'center', gap: '1rem' }}>
+              <Card.Subtitle>{certification.title}</Card.Subtitle>
+              <Card.Img
+                src={certification.img}
+                alt={certification.alt}
+                style={{
+                  width: '90%',
+                  height: '20rem',
+                  borderRadius: '12.5px',
+                }}
+              />
+              <Button
+                style={{
+                  background: 'var(--card-text)',
+                  color: 'var(--background)',
+                  cursor: 'pointer',
+                  width: '70%',
+                  borderRadius: '10px',
+                  fontSize: '2rem',
+                  padding: '1rem',
+                }}
+              >
+                Click to view pdf
+              </Button>
+            </Col>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Card>
   );
 };
 

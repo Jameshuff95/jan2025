@@ -10,6 +10,7 @@ import Contact from './pages/Contact.tsx';
 
 import './App.css';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<string>('dark');

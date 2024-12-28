@@ -1,6 +1,10 @@
 import React from 'react';
-import { Modal, Col, Button } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+import '../index.css';
+import '../App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface ModalProps {
   show: boolean;
@@ -28,55 +32,26 @@ const Menu: React.FC<ModalProps> = ({ show, handleClose }) => {
   ];
 
   return (
-    <Modal
-      id="menu"
-      show={show}
-      onHide={handleClose}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <Modal.Header
-        style={{
-          height: '15vh',
-          color: 'var(--card-text)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Modal.Title style={{ fontSize: '5rem' }}>Menu</Modal.Title>
+    <Modal id="menu" show={show} onHide={handleClose}>
+      <Modal.Header>
+        <Modal.Title>Menu</Modal.Title>
       </Modal.Header>
-      <hr />
-      <Modal.Body style={{ height: '60%' }}>
-        <Col
-          style={{
-            justifyContent: 'space-around',
-            height: '55vh',
-          }}
-        >
-          {links.map((link, index) => (
-            <Link
-              key={index}
-              to={link.href}
-              onClick={handleClose}
-              style={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-                textDecoration: 'none',
-                color: 'var(--card-text)',
-                padding: '2% 5%',
-                fontSize: '4rem',
-              }}
-            >
-              {link.text}
-            </Link>
-          ))}
-        </Col>
+      <Modal.Body>
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            to={link.href}
+            onClick={handleClose}
+            style={{
+              textDecoration: 'none',
+              color: 'var(--card-text)',
+              cursor: 'pointer',
+            }}
+          >
+            {link.text}
+          </Link>
+        ))}
       </Modal.Body>
-      <hr />
       <Modal.Footer
         style={{
           display: 'flex',

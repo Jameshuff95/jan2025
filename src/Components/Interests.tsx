@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 
 interface Interest {
   id: number;
@@ -27,16 +27,19 @@ const interests: Interest[] = [
 
 const Interests: React.FC = () => {
   return (
-    <>
-      {interests.map((interest) => (
-        <Card key={interest.id}>
-          <Card.Subtitle>{interest.title}</Card.Subtitle>
-          <Card.Text style={{ textAlign: 'left' }}>
-            {interest.description}
-          </Card.Text>
-        </Card>
-      ))}
-    </>
+    <Card>
+      <Card.Subtitle style={{ color: 'nav-text' }}>Interests</Card.Subtitle>
+      <Carousel>
+        {interests.map((interest) => (
+          <Carousel.Item key={interest.id}>
+            <Card.Subtitle>{interest.title}</Card.Subtitle>
+            <Card.Text style={{ textAlign: 'left', minHeight: '15rem' }}>
+              {interest.description}
+            </Card.Text>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Card>
   );
 };
 

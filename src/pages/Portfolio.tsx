@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import { Card, Container, Col, Row } from 'react-bootstrap';
+import { Card, Container, Col, Row, Form } from 'react-bootstrap';
 import '../App.css';
 import '../index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Image1 from '../assets/portfolio-image-1.png';
 import Image2 from '../assets/portfolio-image-2.png';
@@ -98,70 +99,63 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <Container>
-      <Row
-        style={{
-          width: '95%',
-          margin: '0 auto',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <Card.Text style={{ color: 'var(--nav-text)', fontSize: '2.5rem' }}>
-          Filter:
-        </Card.Text>
-        <select
+    <>
+      <Container>
+        <Row
           style={{
-            width: '75%',
-            fontSize: '2.5rem',
-            outline: '0',
-            borderRadius: '10px',
-            padding: '1%',
+            fontSize: '2rem',
             background: 'var(--background)',
-            color: 'var(--card-text)',
+            justifyContent: 'space-evenly',
+            width: '95%',
+            borderRadius: '6.75px',
+            margin: '0 auto',
+            padding: '2% 0',
+            height: '5rem',
           }}
-          onChange={filter}
         >
-          {options.map((option) => (
-            <option
-              key={option.id}
-              value={option.value}
-              style={{
-                fontSize: '3.5rem',
-                width: '3rem',
-              }}
-            >
-              {option.option}
-            </option>
-          ))}
-        </select>
-      </Row>
-      {filteredProjects.map((project) => (
-        <Card key={project.id}>
-          <Col style={{ alignItems: 'center', gap: '1rem' }}>
-            <Card.Subtitle>{project.title}</Card.Subtitle>
-            <Card.Img
-              src={project.img}
-              alt={project.alt}
-              style={{ width: '75%' }}
-            />
-            <Card.Text style={{ textAlign: 'center' }}>
-              {project.technology}
-            </Card.Text>
-            <Card.Text
-              style={{
-                marginTop: '0',
-                textAlign: 'left',
-                width: '100%',
-                height: '5rem',
-              }}
-            >
-              {project.description}
-            </Card.Text>
-          </Col>
-        </Card>
-      ))}
+          <Card.Text style={{ width: '20%', padding: '0', margin: '0' }}>
+            Filter :
+          </Card.Text>
+          <Form.Select
+            onChange={filter}
+            style={{ width: '70%', height: '100%', fontSize: '2rem' }}
+          >
+            {options.map((option) => (
+              <option key={option.id} value={option.value}>
+                {option.option}
+              </option>
+            ))}
+          </Form.Select>
+        </Row>
+
+        {filteredProjects.map((project) => (
+          <Card key={project.id}>
+            <Col style={{ alignItems: 'center', gap: '1rem' }}>
+              <Card.Subtitle>{project.title}</Card.Subtitle>
+              <Card.Img
+                src={project.img}
+                alt={project.alt}
+                style={{ width: '75%' }}
+              />
+              <Card.Text style={{ textAlign: 'center' }}>
+                {project.technology}
+              </Card.Text>
+              <Card.Text
+                style={{
+                  marginTop: '0',
+                  textAlign: 'left',
+                  width: '100%',
+                  height: '5rem',
+                }}
+              >
+                {project.description}
+              </Card.Text>
+            </Col>
+          </Card>
+        ))}
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
 

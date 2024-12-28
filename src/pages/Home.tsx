@@ -2,21 +2,27 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import '../App.css';
 import '../index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Footer from '../Components/Footer';
 import Hero from '../Components/Hero.tsx';
 import Mission from '../Components/Mission.tsx';
 import HomeSocials from '../Components/HomeSocials.tsx';
-
-//import FeaturedWork from '../Components/FeaturedWork.tsx';
+import Intro from '../Components/Intro.tsx';
+import FeaturedWork from '../Components/FeaturedWork.tsx';
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Hero />
-      <Mission />
-      <HomeSocials />
+    <>
+      <Container>
+        <Hero />
+        <Intro />
+        <Mission />
+        <HomeSocials />
+        <FeaturedWork />
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
 

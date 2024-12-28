@@ -6,7 +6,7 @@ import '../index.css';
 
 const Intro: React.FC = () => {
   return (
-    <>
+    <Card>
       <Card.Title>
         Driven by Curiosity
         <br />
@@ -24,7 +24,7 @@ const Intro: React.FC = () => {
         </Card.Text>
         <Card.Text>Let's create something amazing together!</Card.Text>
       </Card.Body>
-    </>
+    </Card>
   );
 };
 

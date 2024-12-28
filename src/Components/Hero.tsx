@@ -1,12 +1,18 @@
 import React from 'react';
 import { Card, Col, Figure, FigureImage, FigureCaption } from 'react-bootstrap';
 import Me from '../assets/me.png';
-import Intro from './Intro';
+import DownloadResume from './DownloadResume';
 
 const Hero: React.FC = () => {
   return (
     <Card>
-      <Card.Body className="flex-col-align-center">
+      <Card.Body
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
         <Card.Title>Hello, my name is James.</Card.Title>
         <Col>
           <Figure style={{ marginRight: '2.5rem' }}>
@@ -17,17 +23,25 @@ const Hero: React.FC = () => {
                 style={{
                   borderRadius: '50%',
                   width: '75%',
+                  marginTop: '-10%',
                 }}
               />
             </Col>
           </Figure>
           <FigureCaption>
-            <Card.Text style={{ textAlign: 'center' }}>
+            <Card.Text
+              style={{
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               I am a web developer inclined to prioritize functionality and
               simplicity, as they offer a more straightforward and effective
               approach.
             </Card.Text>
-            <Intro />
+            <DownloadResume />
           </FigureCaption>
         </Col>
       </Card.Body>

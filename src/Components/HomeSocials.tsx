@@ -77,28 +77,25 @@ const HomeSocials: React.FC = () => {
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
+          padding: '0%',
         }}
       >
         {links.map((link) => (
-          <Col key={link.id}>
-            <Col
-              style={{
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                height: '100%',
-                gap: '1rem',
-                margin: '1rem',
-                padding: '1rem 0',
-              }}
-            >
-              <i
-                className={link.icon}
-                style={{ color: link.color, fontSize: '3em' }}
-              />
-              <Card.Text style={{ padding: '0', margin: '0' }}>
-                {link.legend}
-              </Card.Text>
-            </Col>
+          <Col
+            key={link.id}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <i
+              className={link.icon}
+              style={{ color: link.color, fontSize: '3em' }}
+            />
+            <Card.Text style={{ padding: '0', margin: '0' }}>
+              {link.legend}
+            </Card.Text>
           </Col>
         ))}
       </Card.Body>

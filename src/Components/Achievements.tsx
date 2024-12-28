@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 
+import '../index.css';
+import '../App.css';
 interface Achievement {
   id: number;
   title: string;
@@ -30,14 +32,21 @@ const achievements: Achievement[] = [
 
 const Achievements: React.FC = () => {
   return (
-    <>
-      {achievements.map((achievement) => (
-        <Card key={achievement.id}>
-          <Card.Subtitle>{achievement.title}</Card.Subtitle>
-          <Card.Text>{achievement.description}</Card.Text>
-        </Card>
-      ))}
-    </>
+    <Card>
+      <Card.Title>Achievements</Card.Title>
+      <Card.Body>
+        <Carousel>
+          {achievements.map((achievement) => (
+            <Carousel.Item key={achievement.id} style={{}}>
+              <Card.Subtitle>{achievement.title}</Card.Subtitle>
+              <Card.Text style={{ padding: '1rem' }}>
+                {achievement.description}
+              </Card.Text>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Card.Body>
+    </Card>
   );
 };
 
