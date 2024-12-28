@@ -3,7 +3,6 @@ import { Card } from 'react-bootstrap';
 const Experience: React.FC = () => {
   return (
     <Card>
-      <Card.Title>Experience</Card.Title>
       <Card.Body className="d-flex flex-column" style={{ gap: '1rem' }}>
         <Card.Text>
           With over 2 years of experience in the web development industry, I

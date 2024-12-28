@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                 placeholder="First Name"
                 maxLength={25}
                 style={{
-                  borderRadius: '5px',
+                  borderRadius: '12.5px',
                   height: '2rem',
                   padding: '2%',
                   width: '45%',
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                 maxLength={25}
                 style={{
                   width: '45%',
-                  borderRadius: '5px',
+                  borderRadius: '12.5px',
                   height: '2rem',
                   padding: '2%',
                   fontSize: '1.75rem',
@@ -72,30 +72,30 @@ const Contact: React.FC = () => {
               id="message-input"
               as="textarea"
               maxLength={250}
-              placeholder="250 character maximum message here..."
+              placeholder="250 character maximum..."
               style={{
-                borderRadius: '5px',
+                borderRadius: '12.5px',
                 height: '20rem',
                 padding: '2%',
                 fontSize: '1.75rem',
               }}
-            />
+            ></Form.Control>
             <Button
               type="submit"
               style={{
                 width: '100%',
-                height: '4rem',
+                height: '8rem',
                 margin: '0 auto',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                borderRadius: '5px',
-                fontSize: '1.75rem',
+                borderRadius: '12.5px',
+                fontSize: '3.75rem',
                 background: 'var(--card-text)',
-                color: '(#fff)',
+                color: 'var(--background)',
               }}
             >
-              Submit
+              Send Email
             </Button>
           </Form>
         </Card.Body>

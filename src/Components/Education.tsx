@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 const Education: React.FC = () => {
   const schools = [
     {
@@ -19,15 +19,17 @@ const Education: React.FC = () => {
   ];
   return (
     <>
-      {schools.map((school) => (
-        <Card key={school.id}>
-          <Card.Subtitle>{school.degree}</Card.Subtitle>
-          <Card.Text>{school.name}</Card.Text>
-          <Card.Text>
-            {school.start} - {school.end}
-          </Card.Text>
-        </Card>
-      ))}
+      <Col style={{ gap: '1rem' }}>
+        {schools.map((school) => (
+          <Card key={school.id} style={{ textAlign: 'left' }}>
+            <Card.Text>{school.degree}</Card.Text>
+            <Card.Text>{school.name}</Card.Text>
+            <Card.Text>
+              {school.start} - {school.end}
+            </Card.Text>
+          </Card>
+        ))}
+      </Col>
     </>
   );
 };

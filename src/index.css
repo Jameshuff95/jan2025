@@ -10,6 +10,7 @@
   --background: lightblue;
   --background-nav-footer: navy;
   --theme-color: orange;
+  --card-title-alt: lightblue;
   --card-text: navy;
 }
 
@@ -20,6 +21,7 @@
   --background: #333;
   --background-nav-footer: #444;
   --theme-color: aqua;
+  --card-title-alt: aqua;
   --card-text: aqua;
 }
 

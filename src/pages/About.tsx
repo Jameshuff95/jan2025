@@ -16,13 +16,13 @@ const About: React.FC = () => {
     <Container style={{ fontSize: '2rem', textAlign: 'center' }}>
       <Card.Title>Achievments</Card.Title>
       <Achievements />
-      <Card.Title>Education</Card.Title>
+      <Card.Title className="card-title-alt">Education</Card.Title>
       <Education />
-      <Card.Title>Certifications</Card.Title>
+      <Card.Title className="card-title-alt">Certifications</Card.Title>
       <Certifications />
-      <Card.Title>Experience</Card.Title>
+      <Card.Title className="card-title-alt">Experience</Card.Title>
       <Experience />
-      <Card.Title>Interests</Card.Title>
+      <Card.Title className="card-title-alt">Interests</Card.Title>
       <Interests />
       <Footer />
     </Container>
