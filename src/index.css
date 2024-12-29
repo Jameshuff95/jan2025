@@ -33,18 +33,6 @@ body {
   min-height: 100vh;
 }
 
-#root {
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-main {
-  flex: 1;
-}
-
 body {
   background: var(--bg-url);
   background-repeat: no-repeat;
@@ -52,15 +40,20 @@ body {
   background-size: cover;
 }
 
+#root {
+  margin-top: 10vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
 div.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 9rem;
-  min-height: 91vh;
   min-width: 100%;
-  padding: 0;
+  padding-top: 1rem;
 }
 
 div.card {
